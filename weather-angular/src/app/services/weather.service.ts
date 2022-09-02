@@ -12,17 +12,17 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getWeatherData(lon: string, lat: string): Observable<WeatherData> {
-    return this.http.get<WeatherData>(environment.weatherApiBaseUrl, {
-      headers: new HttpHeaders()
-       .set(environment.XRapidAPIHostHeaderName, environment.XRapidAPIHostHeaderValue)
-       .set(environment.XRapidAPIKeyHeaderName, environment.XRapidAPIKeyHeaderValue),
-      params: new HttpParams()
-       .set('lon', lon)
-       .set('lat', lat)
-       .set('units', 'metric')
-       .set('lang', 'en')
-    })
-  }
+  // getWeatherData(lon: string, lat: string): Observable<WeatherData> {
+  //   return this.http.get<WeatherData>(environment.weatherApiBaseUrl, {
+  //     headers: new HttpHeaders()
+  //      .set(environment.XRapidAPIHostHeaderName, environment.XRapidAPIHostHeaderValue)
+  //      .set(environment.XRapidAPIKeyHeaderName, environment.XRapidAPIKeyHeaderValue),
+  //     params: new HttpParams()
+  //      .set('lon', lon)
+  //      .set('lat', lat)
+  //      .set('units', 'metric')
+  //      .set('lang', 'en')
+  //   })
+  // }
 
 }
