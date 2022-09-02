@@ -1,10 +1,12 @@
+<div class="container" *ngIf="weatherData">
+
 <div class="upper-data">
-    <img src="../../assets/hot.jfif" *ngIf="14 > 15">
-    <img src="../../assets/cold.jfif" *ngIf="14 < 15">
+    <img src="../../assets/hot.jfif" *ngIf="weatherData.data[0].temp > 15">
+    <img src="../../assets/cold.jfif" *ngIf="weatherData.data[0].temp < 15">
 
     <div class="weather-data">
-        <div class="location">City</div>
-        <div class="temperature">{{ 14.40 | number: '1.0-0' }} °C</div>
+        <div class="location">{{ weatherData.data[0].city_name }}</div>
+        <div class="temperature">{{ weatherData.data[0].temp | number: '1.0-0' }} °C</div>
     </div>
 </div>
 
@@ -16,10 +18,10 @@
         <div class="info-block">
             <div class="info-block-label">
                 <img src="../../assets/icons8-windsock.gif">
-                <span>speed</span>
+                <span>w. speed</span>
             </div>
             <div class="info-block-value">
-                4.6
+                {{ weatherData.data[0].wind_spd }}
             </div>
         </div>
         <div class="info-block">
@@ -28,7 +30,7 @@
                 <span>direction</span>
             </div>
             <div class="info-block-value">
-                NNW
+                {{ weatherData.data[0].wind_cdir_full }}
             </div>
         </div>
         <div class="info-block">
@@ -37,7 +39,7 @@
                 <span>city code</span>
             </div>
             <div class="info-block-value">
-                LB
+                {{ weatherData.data[0].country_code }}
             </div>
         </div>
         <div class="info-block">
@@ -46,9 +48,11 @@
                 <span>time</span>
             </div>
             <div class="info-block-value">
-                2022-09-02 08:38
+                {{ weatherData.data[0].ob_time }}
             </div>
         </div>
     
     </div>
+</div>
+
 </div>
