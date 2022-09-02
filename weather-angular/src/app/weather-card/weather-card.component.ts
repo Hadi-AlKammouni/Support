@@ -12,10 +12,24 @@ export class WeatherCardComponent implements OnInit {
 
   constructor(private weatherService: WeatherService) { }
 
+  longitude: string = '35.495480'
+  latitude: string = '33.888630'
   weatherData?: WeatherData
 
   ngOnInit(): void {
-    this.weatherService.getWeatherData('35.495480', '33.888630')
+    this.getWeatherData(this.longitude, this.latitude)
+    this.longitude = ''
+    this.latitude = ''
+  }
+
+  onSubmit() {
+    this.getWeatherData(this.longitude, this.latitude)
+    this.longitude = ''
+    this.latitude = ''
+  }
+
+  private getWeatherData(longitude: string, latitude:string) {
+    this.weatherService.getWeatherData(longitude, latitude)
      .subscribe({
       next: (response) => {
         this.weatherData = response

@@ -14,6 +14,12 @@
     text-align: center;
 }
 
+.search button {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+
 .container {
     width: 400px;
     height: 80vh;

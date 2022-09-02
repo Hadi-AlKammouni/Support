@@ -1,7 +1,8 @@
 <div class="search">
-    <form>
-        <input type="text" placeholder="city longitude">
-        <input type="text" placeholder="city latitude">
+    <form #form="ngForm" (submit)="onSubmit()">
+        <input type="text" placeholder="city longitude" name="city" [(ngModel)]="longitude">
+        <input type="text" placeholder="city latitude" name="city" [(ngModel)]="latitude">
+        <button type="submit">Display Weather</button>
     </form>
 </div>
 
