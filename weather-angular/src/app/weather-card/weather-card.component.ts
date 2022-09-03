@@ -24,9 +24,13 @@ export class WeatherCardComponent implements OnInit {
   }
 
   onSubmit() {
-    // this.getWeatherData(this.longitude, this.latitude)
-    this.longitude = ''
-    this.latitude = ''
+    if (!this.latitude || !this.longitude) {
+      alert("both fields must be filled!")
+    } else {
+      // this.getWeatherData(this.longitude, this.latitude)
+      this.longitude = ''
+      this.latitude = ''
+    }
   }
 
   private getWeatherData(longitude: string, latitude:string) {
