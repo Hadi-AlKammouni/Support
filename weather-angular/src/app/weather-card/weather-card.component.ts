@@ -18,13 +18,13 @@ export class WeatherCardComponent implements OnInit {
   isLoading = false
 
   ngOnInit(): void {
-    this.getWeatherData(this.longitude, this.latitude)
+    // this.getWeatherData(this.longitude, this.latitude)
     this.longitude = ''
     this.latitude = ''
   }
 
   onSubmit() {
-    this.getWeatherData(this.longitude, this.latitude)
+    // this.getWeatherData(this.longitude, this.latitude)
     this.longitude = ''
     this.latitude = ''
   }
