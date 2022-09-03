@@ -15,6 +15,7 @@ export class WeatherCardComponent implements OnInit {
   longitude: string = '35.495480'
   latitude: string = '33.888630'
   weatherData?: WeatherData
+  isLoading = false
 
   ngOnInit(): void {
     this.getWeatherData(this.longitude, this.latitude)
@@ -29,11 +30,13 @@ export class WeatherCardComponent implements OnInit {
   }
 
   private getWeatherData(longitude: string, latitude:string) {
+    this.isLoading = true
     this.weatherService.getWeatherData(longitude, latitude)
      .subscribe({
       next: (response) => {
         this.weatherData = response
         console.log(response)
+        this.isLoading = false
       }
      })
   }
