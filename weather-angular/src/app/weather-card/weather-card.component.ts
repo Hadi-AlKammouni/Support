@@ -19,7 +19,7 @@ export class WeatherCardComponent implements OnInit {
   error = '';
 
   ngOnInit(): void {
-    this.getWeatherData(this.longitude, this.latitude)
+    // this.getWeatherData(this.longitude, this.latitude)
     this.longitude = ''
     this.latitude = ''
   }
@@ -28,7 +28,7 @@ export class WeatherCardComponent implements OnInit {
     if (!this.latitude || !this.longitude) {
       alert("both fields must be filled!")
     } else {
-      this.getWeatherData(this.longitude, this.latitude)
+      // this.getWeatherData(this.longitude, this.latitude)
       this.longitude = ''
       this.latitude = ''
     }
