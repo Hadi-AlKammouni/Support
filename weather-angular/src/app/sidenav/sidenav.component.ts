@@ -1,5 +1,5 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { trigger, transition, style, animate, keyframes } from '@angular/animations';
 
 import { navbarData } from './nav-data';
 
@@ -24,6 +24,15 @@ interface SidenavToggle {
         animate('350ms',
           style({ opacity: 0 })
         )
+      ])
+    ]),
+    trigger('rotate',[
+      transition(':enter',[
+        animate('1000ms',
+        keyframes([
+          style({ transform: 'rotate(0deg)', offset: '0' }),
+          style({ transform: 'rotate(4turn)', offset: '1' })
+        ]))
       ])
     ])
   ]
