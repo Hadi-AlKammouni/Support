@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 
 import { environment } from 'env';
 import { WeatherData } from '../models/weather.model';
@@ -22,7 +22,12 @@ export class WeatherService {
        .set('lat', lat)
        .set('units', 'metric')
        .set('lang', 'en')
-    })
+    }).pipe(catchError(this.handleError))
+  }
+
+  private handleError() {
+    let errorMessage = 'Something went wrong.'
+    return throwError(errorMessage)
   }
 
 }
