@@ -10,7 +10,7 @@ export class SidenavComponent implements OnInit {
 
   collapsed = false
   navData = navbarData
-  
+
   constructor() { }
 
   ngOnInit(): void {
