@@ -8,7 +8,7 @@ import { navbarData } from './nav-data';
 })
 export class SidenavComponent implements OnInit {
 
-  collapsed = false
+  collapsed = true
   navData = navbarData
 
   constructor() { }
