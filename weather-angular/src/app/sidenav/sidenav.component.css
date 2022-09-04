@@ -95,3 +95,11 @@
 .sidenav-link-text {
     margin-left: 1.5rem;
 }
+
+.active {
+    background-color: #fff;
+}
+
+.active .sidenav-link-icon, .active .sidenav-link-text {
+    color: #000;
+}
