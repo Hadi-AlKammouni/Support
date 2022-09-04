@@ -9,6 +9,7 @@ import { WeatherCardComponent } from './weather-card/weather-card.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { LoginComponent } from './login/login.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { BodyComponent } from './sidenav/body/body.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     WeatherCardComponent,
     LoadingSpinnerComponent,
     LoginComponent,
-    SidenavComponent
+    SidenavComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
