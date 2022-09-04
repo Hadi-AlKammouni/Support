@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+interface SidenavToggle {
+  screenWidth: number
+  collapsed: boolean
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +11,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'weather-angular';
+
+  isSidenavCollapsed = false
+  screenWidth = 0
+
+  onToggleSidenav(data: SidenavToggle) {
+    this.screenWidth = data.screenWidth
+    this.isSidenavCollapsed = data.collapsed
+  }
 }
