@@ -1,4 +1,5 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 import { navbarData } from './nav-data';
 
@@ -9,7 +10,23 @@ interface SidenavToggle {
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.css']
+  styleUrls: ['./sidenav.component.css'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter',[
+        style({ opacity: 0 }),
+        animate('350ms',
+          style({ opacity: 1 })
+        )
+      ]),
+      transition(':leave',[
+        style({ opacity: 1 }),
+        animate('350ms',
+          style({ opacity: 0 })
+        )
+      ])
+    ])
+  ]
 })
 export class SidenavComponent implements OnInit {
 
