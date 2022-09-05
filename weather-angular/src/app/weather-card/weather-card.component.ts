@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { WeatherData } from '../models/weather.model';
 import { WeatherService } from '../services/weather.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-weather-card',
@@ -10,7 +11,7 @@ import { WeatherService } from '../services/weather.service';
 })
 export class WeatherCardComponent implements OnInit {
 
-  constructor(private weatherService: WeatherService) { }
+  constructor(private weatherService: WeatherService, private toastr: ToastrService) { }
 
   longitude: string = '35.495480'
   latitude: string = '33.888630'
@@ -26,7 +27,7 @@ export class WeatherCardComponent implements OnInit {
 
   onSubmit() {
     if (!this.latitude || !this.longitude) {
-      alert("both fields must be filled!")
+      this.toastr.warning('Warning', 'Both fields must be filled!');
     } else {
       // this.getWeatherData(this.longitude, this.latitude)
       this.longitude = ''
@@ -40,11 +41,11 @@ export class WeatherCardComponent implements OnInit {
      .subscribe(response => {
         this.weatherData = response
         this.isLoading = false
-        console.log(response)
+        this.toastr.success('Success', 'You are viewing the current weather data.');
       }, errorMessage => {
-      this.error = errorMessage
-      this.isLoading = false
-      alert(errorMessage)
+        this.error = errorMessage
+        this.isLoading = false
+        this.toastr.error('Error', errorMessage);
      })
   }
 
