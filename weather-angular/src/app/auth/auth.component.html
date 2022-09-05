@@ -6,24 +6,24 @@
             <mat-card-content>
               <form action="">
                   <mat-form-field>
-                    <span>Email *</span>
                   <input
                     matInput
                     required
                     name="email"
+                    placeholder="Email"
                     ngModel
                     #email="ngModel">
                     <mat-error *ngIf="email.invalid">Email is required</mat-error>
                   <mat-icon matSuffix>email</mat-icon>
                 </mat-form-field>
                 <mat-form-field>
-                  <span>Password *</span>
                   <input
                     matInput
                     type="password"
                     required
                     minlength="6"
                     name="password"
+                    placeholder="Password"
                     ngModel
                     #password="ngModel">
                     <mat-error
@@ -60,11 +60,11 @@
           <mat-card-content>
             <form action="">
               <mat-form-field>
-                <span>User Name *</span>
                 <input
                   matInput
                   required
                   name="username"
+                  placeholder="User Name"
                   ngModel
                   #username="ngModel">
                 <mat-icon matSuffix>perm_identity</mat-icon>
@@ -75,24 +75,24 @@
   
               </mat-form-field>
               <mat-form-field>
-                <span>Email *</span>
                 <input
                   matInput
                   required
                   name="email"
+                  placeholder="Email"
                   ngModel
                   #email="ngModel">
                   <mat-error *ngIf="email.invalid">Email is required</mat-error>
                 <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
               <mat-form-field>
-                <span>Password *</span>
                 <input
                   matInput
                   type="password"
                   required
                   minlength="6"
                   name="password"
+                  placeholder="Password"
                   ngModel
                   #password="ngModel">
                   <mat-error
@@ -107,13 +107,13 @@
   
               </mat-form-field>
               <mat-form-field>
-                  <span>Confirm Password *</span>
                   <input
                   matInput
                   type="password"
                   required
                   minlength="6"
                   name="repassword"
+                  placeholder="Confirm Password"
                   ngModel
                   #repassword="ngModel">
                   <mat-error

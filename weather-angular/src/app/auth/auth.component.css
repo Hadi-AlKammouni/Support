@@ -12,43 +12,21 @@
   overflow: hidden;
 }
 
-.example-stretched-tabs {
-    margin-top: 25px;
-    font-size: 20px;
-    border: 20px solid;
-    border-color: #fff;
-    border-radius: 20px;
-}
-
-mat-card-title {
-    font-size: 24px;
-}
 mat-card {
   width: 40%;
-  margin: 1% auto;
+  margin: 5% auto;
   border-radius: 8px;
 }
 mat-form-field, mat-checkbox {
   width: 80%;
   display: block;
-  margin: 30px auto;
-}
-mat-form-field {
-    border-bottom: 0.5px solid;
-    border-color: #fff;
+  margin: 5px auto;
 }
 mat-card-content {
   margin-top: 40px;
 }
-mat-error {
-    color: rgb(243, 108, 108);
-}
-mat-form-field input {
-    color: #fff;
-}
 
 .login-button {
-  font-weight: bold;  
   margin-top: 20px;
   display: block;
   width: 80%;
