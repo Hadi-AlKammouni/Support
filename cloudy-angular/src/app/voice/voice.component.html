@@ -1,8 +1,8 @@
-<div class="body">
-    <div style="margin: 100px;">
-        <h1>Voice recognition</h1>
-        <button style="margin: 10px;" (click)="startService()">Start</button>
-        <button style="margin: 10px;" (click)="stopService()">Stop</button>
-        <p>{{service.text}}</p>
+<div class="container">
+    <h1>Voice Recognition</h1>
+    <div>
+        <button class="start" (click)="startService()">Start</button>
+        <button class="stop" (click)="stopService()">Stop</button>
     </div>
+    <p>{{service.text}}</p>
 </div>
