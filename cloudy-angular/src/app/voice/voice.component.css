@@ -49,3 +49,8 @@ button {
 .start:active, .stop:active {
     scale: 0.9;
 }
+
+.stopDisabled {
+    background-color: darkgrey;
+    margin-left: 20px;
+}

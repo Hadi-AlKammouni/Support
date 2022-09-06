@@ -2,7 +2,8 @@
     <h1>Voice Recognition</h1>
     <div>
         <button class="start" (click)="startService()">Start</button>
-        <button class="stop" (click)="stopService()">Stop</button>
+        <button *ngIf="isTalking" class="stop" (click)="stopService()">Stop</button>
+        <button *ngIf="!isTalking" class="stopDisabled" (click)="clickStart()">Stop</button>
     </div>
     <p>{{service.text}}</p>
 </div>
