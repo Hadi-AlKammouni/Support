@@ -10,14 +10,17 @@
         <button *ngIf="isTalking" class="stop" (click)="stopService()">Stop</button>
         <button *ngIf="isText && !isTalking" class="clear" (click)="clear()">Clear</button>
 
-        <mat-form-field appearance="fill">
-            <mat-label>Choose a language</mat-label>
-            <mat-select [disabled]="disableSelect.value" (selectionChange)="selectLanguage($event.value)">
-              <mat-option value="en" [disabled]="en">English</mat-option>
-              <mat-option value="ar" [disabled]="ar">عربي</mat-option>
-              <mat-option value="es" [disabled]="es">Spain</mat-option>
-            </mat-select>
-        </mat-form-field>
+        <span *ngIf="service.text">
+            <mat-form-field appearance="fill" class="dropdown">
+                <mat-label>Choose a language</mat-label>
+                <mat-select [disabled]="disableSelect.value" (selectionChange)="selectLanguage($event.value)">
+                  <mat-option value="en" [disabled]="en">English</mat-option>
+                  <mat-option value="ar" [disabled]="ar">عربي</mat-option>
+                  <mat-option value="es" [disabled]="es">Spain</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button class="translate">Translate</button>
+        </span>
 
         <p>{{service.text}}</p>
     </div>

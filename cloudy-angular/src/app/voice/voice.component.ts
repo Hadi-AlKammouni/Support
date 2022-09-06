@@ -13,7 +13,7 @@ export class VoiceComponent implements OnInit {
   disableSelect = new FormControl(false);
   isTalking = false
   isText = false
-  en = true
+  en = false
   ar = false
   es = false
 

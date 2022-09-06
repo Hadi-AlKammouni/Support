@@ -47,7 +47,7 @@ button {
     background-color: rgb(244, 49, 49);
 }
 
-.start:active, .stop:active, .clear:active {
+.start:active, .stop:active, .clear:active, .translate:active {
     scale: 0.9;
 }
 
@@ -59,6 +59,19 @@ button {
     background-color: rgb(255, 84, 22);
 }
 
+.translate {
+  background-color: skyblue;
+  margin-left: 20px;
+}
+
+.translate:hover {
+  background-color: rgb(43, 184, 240);
+}
+
+.dropdown {
+  background-color: var(--blue-2);
+  margin-left: 20px;
+}
 
 /* Voice loading spinner */
 .lds-ellipsis {
