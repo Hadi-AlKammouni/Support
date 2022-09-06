@@ -30,7 +30,7 @@ export class VoiceComponent implements OnInit {
   }
 
   clickStart() {
-    this.toastr.info('Info', 'Click start to record.');
+    this.toastr.info('Info', 'Click on start button to record.');
   }
 
 }
