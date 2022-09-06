@@ -20,6 +20,7 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { BodyComponent } from './sidenav/body/body.component';
 import { AuthComponent } from './auth/auth.component';
+import { VoiceComponent } from './voice/voice.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AuthComponent } from './auth/auth.component';
     LoadingSpinnerComponent,
     SidenavComponent,
     BodyComponent,
-    AuthComponent
+    AuthComponent,
+    VoiceComponent
   ],
   imports: [
     BrowserModule,
