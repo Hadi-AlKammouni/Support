@@ -13,6 +13,9 @@ export class VoiceComponent implements OnInit {
   disableSelect = new FormControl(false);
   isTalking = false
   isText = false
+  en = true
+  ar = false
+  es = false
 
   constructor( public service : VoiceRecognitionService ) { 
     this.service.init()
@@ -38,7 +41,19 @@ export class VoiceComponent implements OnInit {
   }
 
   selectLanguage(event: any) {
-    console.log(event)
+    if (event === 'en') {
+      this.en = true
+      this.ar = false
+      this.es = false
+    } else if (event === 'ar') {
+      this.ar = true
+      this.en = false
+      this.es = false
+    } else if (event === 'es') {
+      this.es = true
+      this.en = false
+      this.ar = false
+    }
   }
 
 }

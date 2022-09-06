@@ -13,9 +13,9 @@
         <mat-form-field appearance="fill">
             <mat-label>Choose a language</mat-label>
             <mat-select [disabled]="disableSelect.value" (selectionChange)="selectLanguage($event.value)">
-              <mat-option value="en">English</mat-option>
-              <mat-option value="ar">عربي</mat-option>
-              <mat-option value="es">Spain</mat-option>
+              <mat-option value="en" [disabled]="en">English</mat-option>
+              <mat-option value="ar" [disabled]="ar">عربي</mat-option>
+              <mat-option value="es" [disabled]="es">Spain</mat-option>
             </mat-select>
         </mat-form-field>
 
