@@ -16,6 +16,7 @@ export class VoiceComponent implements OnInit {
   en = false
   ar = false
   es = false
+  lang = ''
 
   constructor( public service : VoiceRecognitionService ) { 
     this.service.init()
@@ -42,18 +43,25 @@ export class VoiceComponent implements OnInit {
 
   selectLanguage(event: any) {
     if (event === 'en') {
+      this.lang = 'en'
       this.en = true
       this.ar = false
       this.es = false
     } else if (event === 'ar') {
+      this.lang = 'ar'
       this.ar = true
       this.en = false
       this.es = false
     } else if (event === 'es') {
+      this.lang = 'es'
       this.es = true
       this.en = false
       this.ar = false
     }
+  }
+
+  translate() {
+    console.log(this.lang)
   }
 
 }
