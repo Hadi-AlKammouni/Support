@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 import { VoiceRecognitionService } from '../services/voice-service/voice-recognition.service';
 
@@ -9,6 +10,7 @@ import { VoiceRecognitionService } from '../services/voice-service/voice-recogni
 })
 export class VoiceComponent implements OnInit {
 
+  disableSelect = new FormControl(false);
   isTalking = false
   isText = false
 
@@ -33,6 +35,10 @@ export class VoiceComponent implements OnInit {
   clear() {
     this.isText = false
     this.service.clear()
+  }
+
+  selectLanguage(event: any) {
+    console.log(event)
   }
 
 }

@@ -1,11 +1,25 @@
 <div class="container">
+
     <h1>
         Voice Recognition
         <div class="lds-ellipsis" *ngIf="isTalking"><div></div><div></div><div></div><div></div></div>
     </h1>
+    
     <div>
         <button class="start" (click)="startService()">Start</button>
         <button *ngIf="isTalking" class="stop" (click)="stopService()">Stop</button>
         <button *ngIf="isText && !isTalking" class="clear" (click)="clear()">Clear</button>
-    <p>{{service.text}}</p>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Choose a language</mat-label>
+            <mat-select [disabled]="disableSelect.value" (selectionChange)="selectLanguage($event.value)">
+              <mat-option value="en">English</mat-option>
+              <mat-option value="ar">عربي</mat-option>
+              <mat-option value="es">Spain</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <p>{{service.text}}</p>
+    </div>
+
 </div>

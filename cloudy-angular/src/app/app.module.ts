@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -45,6 +46,7 @@ import { VoiceComponent } from './voice/voice.component';
     MatButtonModule,
     MatCheckboxModule,
     MatIconModule,
+    MatSelectModule,
     CommonModule,
     ToastrModule.forRoot()
   ],
