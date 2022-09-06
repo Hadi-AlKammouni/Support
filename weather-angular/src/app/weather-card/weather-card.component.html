@@ -11,7 +11,7 @@
     <app-loading-spinner></app-loading-spinner>
 </div>
 
-<div class="container" *ngIf="weatherData">
+<div class="container" *ngIf="weatherData && !isLoading">
 
 <div class="upper-data">
     <img src="../../assets/hot.jfif" *ngIf="weatherData.data[0].temp > 15">
@@ -19,6 +19,7 @@
 
     <div class="weather-data">
         <div class="location">{{ weatherData.data[0].city_name }}</div>
+        <br><br>
         <div class="temperature">{{ weatherData.data[0].temp | number: '1.0-0' }} °C</div>
     </div>
 </div>
