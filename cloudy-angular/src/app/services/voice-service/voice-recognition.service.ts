@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { ToastrService } from 'ngx-toastr';
+
 declare var webkitSpeechRecognition: any;
 
 @Injectable({
@@ -12,7 +14,7 @@ export class VoiceRecognitionService {
   public text = '';
   tempWords!: string;
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   init() {
 
@@ -48,6 +50,14 @@ export class VoiceRecognitionService {
     this.wordConcat()
     this.recognition.stop();
     console.log("End speech recognition")
+  }
+  clear() {
+    if (this.text.length > 0) {
+      this.text = ''
+      this.toastr.success('Success', 'Successfully cleared.');
+    } else {
+      this.toastr.info('Info', 'Found nothing to clear.');
+    }
   }
 
   wordConcat() {

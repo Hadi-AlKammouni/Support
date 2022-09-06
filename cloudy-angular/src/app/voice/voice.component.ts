@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 
 import { VoiceRecognitionService } from '../services/voice-service/voice-recognition.service';
 
@@ -11,8 +10,9 @@ import { VoiceRecognitionService } from '../services/voice-service/voice-recogni
 export class VoiceComponent implements OnInit {
 
   isTalking = false
+  isText = false
 
-  constructor( public service : VoiceRecognitionService, private toastr: ToastrService) { 
+  constructor( public service : VoiceRecognitionService ) { 
     this.service.init()
   }
 
@@ -23,14 +23,16 @@ export class VoiceComponent implements OnInit {
     this.isTalking = true
     this.service.start()
   }
-
+  
   stopService(){
+    this.isText = true
     this.isTalking = false
     this.service.stop()
   }
 
-  clickStart() {
-    this.toastr.info('Info', 'Click on start button to record.');
+  clear() {
+    this.isText = false
+    this.service.clear()
   }
 
 }

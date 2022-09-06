@@ -6,7 +6,6 @@
     <div>
         <button class="start" (click)="startService()">Start</button>
         <button *ngIf="isTalking" class="stop" (click)="stopService()">Stop</button>
-        <button *ngIf="!isTalking" class="stopDisabled" (click)="clickStart()">Stop</button>
-    </div>
+        <button *ngIf="isText && !isTalking" class="clear" (click)="clear()">Clear</button>
     <p>{{service.text}}</p>
 </div>

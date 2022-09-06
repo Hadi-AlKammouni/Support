@@ -30,7 +30,7 @@ button {
 
 .start {
     background-color: rgb(183, 250, 82);
-    margin: 20px 0 20px 30px;
+    margin: 20px 20px 20px 30px;
 }
 
 .start:hover {
@@ -40,19 +40,23 @@ button {
 .stop {
     background-color: rgb(245, 82, 82);
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 .stop:hover {
     background-color: rgb(244, 49, 49);
 }
 
-.start:active, .stop:active {
+.start:active, .stop:active, .clear:active {
     scale: 0.9;
 }
 
-.stopDisabled {
-    background-color: darkgrey;
-    margin-left: 20px;
+.clear {
+    background-color:coral;
+}
+
+.clear:hover {
+    background-color: rgb(255, 84, 22);
 }
 
 
