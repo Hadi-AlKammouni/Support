@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { catchError, throwError } from 'rxjs';
 
 import { environment } from 'env';
 
@@ -23,6 +24,12 @@ export class TranslateService {
           .set(environment.XRapidAPIKeyName, environment.XRapidAPIKeyValue)
           .set(environment.XRapidHostName, environment.XRapidHostValue),
       })
+    .pipe(catchError(this.handleError))
+  }
+
+  private handleError() {
+    let errorMessage = 'Something went wrong.'
+    return throwError(errorMessage)
   }
 
 }
