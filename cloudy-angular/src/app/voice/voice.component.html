@@ -19,7 +19,7 @@
                   <mat-option value="es" [disabled]="es">Spain</mat-option>
                 </mat-select>
             </mat-form-field>
-            <button *ngIf="en || ar || es" class="translate">Translate</button>
+            <button *ngIf="en || ar || es" class="translate" (click)="translate()">Translate</button>
         </span>
 
         <p>{{service.text}}</p>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { TranslateService } from '../services/translate-service/translate.service';
 
 import { VoiceRecognitionService } from '../services/voice-service/voice-recognition.service';
 
@@ -18,7 +19,7 @@ export class VoiceComponent implements OnInit {
   es = false
   lang = 'en'
 
-  constructor( public service : VoiceRecognitionService ) { 
+  constructor( public service : VoiceRecognitionService, private translateService: TranslateService ) { 
     this.service.init()
   }
 
@@ -58,6 +59,15 @@ export class VoiceComponent implements OnInit {
       this.en = false
       this.ar = false
     }
+  }
+
+  translate() {
+    this.translateService.translate(this.lang, this.service.text)
+    .subscribe(response => {
+      console.log(response)
+    }, errorMessage => {
+      console.log(errorMessage)
+   })
   }
 
 }
