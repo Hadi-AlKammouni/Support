@@ -17,7 +17,7 @@ export class VoiceComponent implements OnInit {
   isText = false
   isTranslating = false
   isTranslated = false
-  en = true
+  en = false
   ar = false
   es = false
   lang = 'en'
@@ -32,7 +32,6 @@ export class VoiceComponent implements OnInit {
 
   startService(){
     this.isTalking = true
-    this.isTranslated = false
     this.service.start()
   }
   
@@ -73,11 +72,17 @@ export class VoiceComponent implements OnInit {
     .subscribe(response => {
       this.isTranslating = false
       this.isTranslated = true
+      this.en = false
+      this.ar = false
+      this.es = false
       this.translated = response.translations.translation
       console.log(this.translated)
       this.toastr.success('Success', `Translated successfully.`);
     }, errorMessage => {
       this.isTranslating = false
+      this.en = false
+      this.ar = false
+      this.es = false
       console.log(errorMessage)
       this.toastr.error('Error', 'Something went wrong.');
    })
