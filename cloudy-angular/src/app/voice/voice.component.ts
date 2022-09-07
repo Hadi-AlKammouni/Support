@@ -13,10 +13,10 @@ export class VoiceComponent implements OnInit {
   disableSelect = new FormControl(false);
   isTalking = false
   isText = false
-  en = false
+  en = true
   ar = false
   es = false
-  lang = ''
+  lang = 'en'
 
   constructor( public service : VoiceRecognitionService ) { 
     this.service.init()
@@ -58,10 +58,6 @@ export class VoiceComponent implements OnInit {
       this.en = false
       this.ar = false
     }
-  }
-
-  translate() {
-    console.log(this.lang)
   }
 
 }
