@@ -2,17 +2,27 @@
 
     <h1>
         Voice Recognition
-        <div class="lds-ellipsis" *ngIf="isTalking"><div></div><div></div><div></div><div></div></div>
+        <span *ngIf="isTranslating">
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </span>
     </h1>
     
-    <div>
-        <button class="start" (click)="startService()">Start</button>
+    <span class="talking" *ngIf="isTalking">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </span>
+
+    <div *ngIf="!isTranslating">
+        <button *ngIf="!isTalking" class="start" (click)="startService()">Start</button>
         <button *ngIf="isTalking" class="stop" (click)="stopService()">Stop</button>
         <button *ngIf="isText && !isTalking" class="clear" (click)="clear()">Clear</button>
 
-        <span *ngIf="service.text">
+        <span *ngIf="service.text && !isTalking">
             <mat-form-field appearance="fill" class="dropdown">
-                <mat-label>English</mat-label>
+                <mat-label>Select language</mat-label>
                 <mat-select [disabled]="disableSelect.value" (selectionChange)="selectLanguage($event.value)">
                   <mat-option value="en" [disabled]="en">English</mat-option>
                   <mat-option value="ar" [disabled]="ar">عربي</mat-option>
@@ -21,8 +31,8 @@
             </mat-form-field>
             <button *ngIf="en || ar || es" class="translate" (click)="translate()">Translate</button>
         </span>
-
-        <p>{{service.text}}</p>
     </div>
+
+    <p *ngIf="!isTranslating">{{service.text}}</p>
 
 </div>
