@@ -33,6 +33,7 @@
         </span>
     </div>
 
-    <p *ngIf="!isTranslating">{{service.text}}</p>
+    <p *ngIf="!isTranslating && !isTranslated">{{service.text}}</p>
+    <p *ngIf="isTranslated">{{translated}}</p>
 
 </div>
