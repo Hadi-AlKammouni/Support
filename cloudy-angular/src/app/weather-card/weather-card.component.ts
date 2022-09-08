@@ -11,15 +11,24 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class WeatherCardComponent implements OnInit {
 
-  constructor(private weatherService: WeatherService, private toastr: ToastrService) { }
+  constructor(private weatherService: WeatherService, private toastr: ToastrService ) { }
 
   longitude: string = '35.495480'
   latitude: string = '33.888630'
   weatherData?: WeatherData
   isLoading = false
   error = '';
+  isToken = true
 
   ngOnInit(): void {
+    const loaded = localStorage.getItem('key')
+    if(!loaded){
+      localStorage.setItem('key','loaded')
+      location.reload()
+    } else {
+      localStorage.removeItem('key') 
+    }
+    
     // this.getWeatherData(this.longitude, this.latitude)
     this.longitude = ''
     this.latitude = ''
@@ -50,3 +59,7 @@ export class WeatherCardComponent implements OnInit {
   }
 
 }
+function reloaded() {
+  throw new Error('Function not implemented.');
+}
+

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 import { AuthService } from '../services/auth-service/auth.service';
@@ -11,7 +12,7 @@ import { AuthService } from '../services/auth-service/auth.service';
 })
 export class AuthComponent implements OnInit {
 
-  constructor(private auth: AuthService, private toastr: ToastrService) { }
+  constructor(private auth: AuthService, private toastr: ToastrService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -30,6 +31,7 @@ export class AuthComponent implements OnInit {
      .subscribe(response => {
       console.log(response)
       localStorage.setItem("token", response.access_token)
+      this.router.navigate(['/weather'])
       this.toastr.success('Success', response.message);
     }, errorMessage => {
       console.log(errorMessage)
@@ -49,6 +51,7 @@ export class AuthComponent implements OnInit {
      .subscribe(response => {
       console.log(response)
       localStorage.setItem("token", response.access_token)
+      this.router.navigate(['/weather'])
       this.toastr.success('Success', "Logged in successfully.");
     }, errorMessage => {
       console.log(errorMessage)
