@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 
 import { Register } from 'src/app/models/register.model';
+import { Login } from 'src/app/models/login.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,14 @@ export class AuthService {
         "password_confirmation": confirmPassword
       })
     .pipe(catchError(this.handleError))
+  }
+
+  login(email: string, password: string): Observable<Login> {
+    return this.http.post<Login>('http://localhost:8000/api/login',
+      {
+        "email": email,
+        "password": password,
+      })
   }
 
   private handleError(errorRes: HttpErrorResponse) {

@@ -11,7 +11,7 @@ import { AuthService } from '../services/auth-service/auth.service';
 })
 export class AuthComponent implements OnInit {
 
-  constructor(private register: AuthService, private toastr: ToastrService) { }
+  constructor(private auth: AuthService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +26,7 @@ export class AuthComponent implements OnInit {
     const password = form.value.password
     const confirmPassword = form.value.repassword
 
-    this.register.register(username, email, password, confirmPassword)
+    this.auth.register(username, email, password, confirmPassword)
      .subscribe(response => {
       console.log(response)
       this.toastr.success('Success', response.message);
