@@ -58,7 +58,7 @@
         </mat-tab>
         <mat-tab label="Sign Up">
           <mat-card-content>
-            <form action="">
+            <form action="" #authForm="ngForm" (ngSubmit)="signup(authForm)">
               <mat-form-field>
                 <input
                   matInput

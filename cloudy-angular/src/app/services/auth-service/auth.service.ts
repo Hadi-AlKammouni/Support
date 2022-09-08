@@ -11,10 +11,10 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  register(name: string, email: string, password: string, confirmPassword: string): Observable<Register> {
+  register(username: string, email: string, password: string, confirmPassword: string): Observable<Register> {
     return this.http.post<Register>('http://localhost:8000/api/register',
       {
-        "name": name,
+        "name": username,
         "email": email,
         "password": password,
         "password_confirmation": confirmPassword
@@ -34,6 +34,6 @@ export class AuthService {
       errorMessage = errorMessage + errorRes.error.password
     }
     return throwError(errorMessage)
-}
+  }
 
 }
