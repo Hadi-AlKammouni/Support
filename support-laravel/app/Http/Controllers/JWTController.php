@@ -76,4 +76,16 @@ class JWTController extends Controller
             'expires_in' => auth('api')->factory()->getTTL() * 60
         ], 200);
     }
+
+     /**
+     * Logout user
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function logout()
+    {
+        auth()->logout();
+
+        return response()->json(['message' => 'User successfully logged out.']);
+    }
 }
