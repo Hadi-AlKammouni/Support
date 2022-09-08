@@ -22,13 +22,17 @@ export class WeatherCardComponent implements OnInit {
 
   ngOnInit(): void {
     const loaded = localStorage.getItem('key')
-    if(!loaded){
-      localStorage.setItem('key','loaded')
-      location.reload()
-    } else {
-      localStorage.removeItem('key') 
+    const loadedAgain = localStorage.getItem('key-two')
+    if (!loadedAgain) {
+      if(!loaded){
+        localStorage.setItem('key','loaded')
+        localStorage.setItem('key-two','loaded')
+        location.reload()
+      } else {
+        localStorage.removeItem('key') 
+      }
     }
-    
+
     // this.getWeatherData(this.longitude, this.latitude)
     this.longitude = ''
     this.latitude = ''
