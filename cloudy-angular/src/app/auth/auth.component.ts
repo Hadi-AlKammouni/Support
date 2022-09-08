@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 import { AuthService } from '../services/auth-service/auth.service';
 
@@ -10,7 +11,7 @@ import { AuthService } from '../services/auth-service/auth.service';
 })
 export class AuthComponent implements OnInit {
 
-  constructor(private register: AuthService) { }
+  constructor(private register: AuthService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -28,8 +29,10 @@ export class AuthComponent implements OnInit {
     this.register.register(username, email, password, confirmPassword)
      .subscribe(response => {
       console.log(response)
+      this.toastr.success('Success', response.message);
     }, errorMessage => {
       console.log(errorMessage)
+      this.toastr.error('Error', errorMessage);
     })
   }
 
