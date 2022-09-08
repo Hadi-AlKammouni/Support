@@ -44,7 +44,7 @@ export class AuthService {
       errorMessage = errorMessage + errorRes.error.password
     }
     if (errorRes.error.error) {
-      errorMessage = errorMessage + errorRes.error.error
+      errorMessage = errorRes.error.error
     }
     return throwError(errorMessage)
   }

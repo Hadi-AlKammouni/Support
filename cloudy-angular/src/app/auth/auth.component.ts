@@ -47,8 +47,10 @@ export class AuthComponent implements OnInit {
     this.auth.login(email, password)
      .subscribe(response => {
       console.log(response)
+      this.toastr.success('Success', "Logged in successfully.");
     }, errorMessage => {
       console.log(errorMessage)
+      this.toastr.error('Error', errorMessage);
     })
   }
 
