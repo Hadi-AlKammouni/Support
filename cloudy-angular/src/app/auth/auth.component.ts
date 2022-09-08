@@ -29,6 +29,7 @@ export class AuthComponent implements OnInit {
     this.auth.register(username, email, password, confirmPassword)
      .subscribe(response => {
       console.log(response)
+      localStorage.setItem("token", response.access_token)
       this.toastr.success('Success', response.message);
     }, errorMessage => {
       console.log(errorMessage)
@@ -47,6 +48,7 @@ export class AuthComponent implements OnInit {
     this.auth.login(email, password)
      .subscribe(response => {
       console.log(response)
+      localStorage.setItem("token", response.access_token)
       this.toastr.success('Success', "Logged in successfully.");
     }, errorMessage => {
       console.log(errorMessage)
