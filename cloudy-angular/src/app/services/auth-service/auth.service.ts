@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 
 import { Register } from 'src/app/models/register.model';
 
@@ -19,6 +19,21 @@ export class AuthService {
         "password": password,
         "password_confirmation": confirmPassword
       })
+    .pipe(catchError(this.handleError))
   }
+
+  private handleError(errorRes: HttpErrorResponse) {
+    let errorMessage = 'An unknown error occured'
+    if (!errorRes.error) {
+        return throwError(errorMessage)
+    }
+    if (errorRes.error.email) {
+      errorMessage = errorRes.error.email
+    }
+    if (errorRes.error.password) {
+      errorMessage = errorMessage + errorRes.error.password
+    }
+    return throwError(errorMessage)
+}
 
 }
