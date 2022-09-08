@@ -29,6 +29,7 @@ export class AuthService {
         "email": email,
         "password": password,
       })
+    .pipe(catchError(this.handleError))
   }
 
   private handleError(errorRes: HttpErrorResponse) {
@@ -41,6 +42,9 @@ export class AuthService {
     }
     if (errorRes.error.password) {
       errorMessage = errorMessage + errorRes.error.password
+    }
+    if (errorRes.error.error) {
+      errorMessage = errorMessage + errorRes.error.error
     }
     return throwError(errorMessage)
   }
