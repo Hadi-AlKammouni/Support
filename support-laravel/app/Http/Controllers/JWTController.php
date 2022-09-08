@@ -44,9 +44,16 @@ class JWTController extends Controller
                 'password' => Hash::make($request->password)
             ]);
 
+        if (!$token = auth()->attempt($validator->validated())) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }    
+
         return response()->json([
             'message' => 'User successfully registered',
-            'user' => $user
+            'access_token' => $token,
+            'token_type' => 'bearer',
+            'expires_in' => auth('api')->factory()->getTTL() * 60,
+            'user' => $user,
         ], 201);
     }
 
