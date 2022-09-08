@@ -8,5 +8,10 @@ export const navbarData = [
         routerLink: 'voice',
         icon: 'fa fa-microphone',
         label: 'Voice Recognition'
+    },
+    {
+        routerLink: 'logout',
+        icon: 'fa fa-right-from-bracket',
+        label: 'Logout'
     }
 ]

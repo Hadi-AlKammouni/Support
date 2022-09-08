@@ -22,6 +22,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { BodyComponent } from './sidenav/body/body.component';
 import { AuthComponent } from './auth/auth.component';
 import { VoiceComponent } from './voice/voice.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { VoiceComponent } from './voice/voice.component';
     SidenavComponent,
     BodyComponent,
     AuthComponent,
-    VoiceComponent
+    VoiceComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

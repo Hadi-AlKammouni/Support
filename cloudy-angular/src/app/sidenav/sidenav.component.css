@@ -103,3 +103,9 @@
 .active .sidenav-link-icon, .active .sidenav-link-text {
     color: #000;
 }
+
+.sidenav-nav .sidenav-nav-item:last-child {
+    position: absolute;
+    bottom: 2.3rem;
+    width: 80%;
+}
