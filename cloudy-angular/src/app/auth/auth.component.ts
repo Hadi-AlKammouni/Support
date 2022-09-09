@@ -15,6 +15,13 @@ export class AuthComponent implements OnInit {
   constructor(private auth: AuthService, private toastr: ToastrService, private router: Router) { }
 
   ngOnInit(): void {
+    const loaded = localStorage.getItem('logout')
+    if(!loaded){
+      localStorage.setItem('logout','loaded')
+      location.reload()
+    } else {
+      localStorage.removeItem('logout') 
+    }
   }
 
   signup(form: NgForm) {

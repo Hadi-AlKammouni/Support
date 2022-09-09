@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 import { AuthService } from '../services/auth-service/auth.service';
@@ -11,7 +12,7 @@ import { AuthService } from '../services/auth-service/auth.service';
 export class LogoutComponent implements OnInit {
 
   token?: any
-  constructor(private logout: AuthService, private toastr: ToastrService) { }
+  constructor(private logout: AuthService, private toastr: ToastrService, private router: Router) { }
 
   ngOnInit(): void {
     this.token = localStorage.getItem('token')
@@ -19,6 +20,8 @@ export class LogoutComponent implements OnInit {
     .subscribe(response => {
       console.log(response)
       this.toastr.success('Success', response.message);
+      localStorage.clear()
+      this.router.navigate(['/auth'])
     }, errorMessage => {
       console.log(errorMessage)
       this.toastr.error('Error', errorMessage);
