@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { LogoutComponent } from './logout/logout.component';
 import { VoiceComponent } from './voice/voice.component';
-
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'weather', pathMatch: 'full' },
+  { path: '', redirectTo: 'app', pathMatch: 'full' },
+  { path: 'app', component: AppComponent },
   { path: 'weather', component: WeatherCardComponent },
   { path: 'auth', component: AuthComponent },
   { path: 'voice', component: VoiceComponent },

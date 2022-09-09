@@ -18,6 +18,15 @@ export class AppComponent {
   isSidenavCollapsed = false
   screenWidth = 0
 
+  ngOnInit(): void {
+    const loaded = localStorage.getItem('token')
+    if(!loaded){
+      this.router.navigate(['/auth'])
+    } else {
+      this.router.navigate(['/weather'])
+    }
+  }
+
   constructor(private router: Router) {
     this.token = this.asyncLocalStorage.getItem('token');
     if(this.token) {
