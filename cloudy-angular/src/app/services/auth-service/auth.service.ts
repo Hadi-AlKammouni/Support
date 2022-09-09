@@ -1,9 +1,10 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 
 import { Register } from 'src/app/models/register.model';
 import { Login } from 'src/app/models/login.model';
+import { Logout } from 'src/app/models/logout.model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,16 @@ export class AuthService {
         "password": password,
       })
     .pipe(catchError(this.handleError))
+  }
+
+  logout(token: any): Observable<Logout> {
+    return this.http.post<Logout>('http://localhost:8000/api/logout',
+    {},
+    {
+      headers: new HttpHeaders()
+      .set("Authorization", `Bearer ${token}`)
+      .set("Accept", "application/json"),
+    })
   }
 
   private handleError(errorRes: HttpErrorResponse) {

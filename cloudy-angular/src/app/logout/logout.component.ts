@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AuthService } from '../services/auth-service/auth.service';
+
 @Component({
   selector: 'app-logout',
   templateUrl: './logout.component.html',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor() { }
+  token?: any
+  constructor(private logout: AuthService) { }
 
   ngOnInit(): void {
+    this.token = localStorage.getItem('token')
+    this.logout.logout(this.token)
+    .subscribe(response => {
+      console.log(response)
+    }, errorMessage => {
+      console.log(errorMessage)
+   })
   }
 
 }
