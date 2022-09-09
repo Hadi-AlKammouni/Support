@@ -41,6 +41,7 @@ export class AuthService {
       .set("Authorization", `Bearer ${token}`)
       .set("Accept", "application/json"),
     })
+    .pipe(catchError(this.handleError))
   }
 
   private handleError(errorRes: HttpErrorResponse) {
@@ -56,6 +57,9 @@ export class AuthService {
     }
     if (errorRes.error.error) {
       errorMessage = errorRes.error.error
+    }
+    if (errorRes.error.message) {
+      errorMessage = errorRes.error.message
     }
     return throwError(errorMessage)
   }
