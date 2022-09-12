@@ -24,6 +24,7 @@ import { BodyComponent } from './sidenav/body/body.component';
 import { AuthComponent } from './auth/auth.component';
 import { VoiceComponent } from './voice/voice.component';
 import { LogoutComponent } from './logout/logout.component';
+import { QrcodeComponent } from './qrcode/qrcode.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LogoutComponent } from './logout/logout.component';
     BodyComponent,
     AuthComponent,
     VoiceComponent,
-    LogoutComponent
+    LogoutComponent,
+    QrcodeComponent
   ],
   imports: [
     BrowserModule,
