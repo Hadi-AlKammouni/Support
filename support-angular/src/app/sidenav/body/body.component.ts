@@ -24,4 +24,5 @@ export class BodyComponent implements OnInit {
     }
     return styleClass
   }
+  
 }

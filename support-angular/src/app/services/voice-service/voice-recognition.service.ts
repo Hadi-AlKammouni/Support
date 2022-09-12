@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { ToastrService } from 'ngx-toastr';
 
 declare var webkitSpeechRecognition: any;
@@ -64,4 +63,5 @@ export class VoiceRecognitionService {
     this.text = this.text + ' ' + this.tempWords + '.';
     this.tempWords = '';
   }
+  
 }

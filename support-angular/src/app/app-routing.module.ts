@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'auth', component: AuthComponent },
   { path: 'voice', component: VoiceComponent },
   { path: 'logout', component: LogoutComponent },
-  { path: 'qr', component: QrcodeComponent },
+  { path: 'qr', component: QrcodeComponent }
 ];
 
 @NgModule({

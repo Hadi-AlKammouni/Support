@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { WeatherData } from '../models/weather.model';
-import { WeatherService } from '../services/weather.service';
+import { WeatherService } from '../services/weather-service/weather.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -63,7 +63,3 @@ export class WeatherCardComponent implements OnInit {
   }
 
 }
-function reloaded() {
-  throw new Error('Function not implemented.');
-}
-

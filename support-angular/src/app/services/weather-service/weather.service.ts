@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 
 import { environment } from 'env';
-import { WeatherData } from '../models/weather.model';
+import { WeatherData } from '../../models/weather.model';
 
 @Injectable({
   providedIn: 'root'
