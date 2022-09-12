@@ -1,12 +1,15 @@
-<div>
-    <h1>
-      QR Code Generator 
-    </h1>
+<div class="container">
+
+    <h1>QR Code Generator </h1>
+    
+    <div class="row">
+        <ngx-qrcode 
+            [elementType]="elementType" 
+            [value]="value"
+            correctionLevel="correctionLevel">
+        </ngx-qrcode>
+
+        <input type="text" [(ngModel)]="value">
+    </div>
+
 </div>
-  
-<ngx-qrcode 
-  [elementType]="elementType" 
-  [value]="value"
-  cssClass="aclass"
-  correctionLevel="correctionLevel">
-</ngx-qrcode>

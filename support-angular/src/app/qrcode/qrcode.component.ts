@@ -8,10 +8,9 @@ import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from '@techiedi
 })
 export class QrcodeComponent implements OnInit {
 
-  // title = 'app';
   elementType = NgxQrcodeElementTypes.URL;
   correctionLevel = NgxQrcodeErrorCorrectionLevels.HIGH;
-  value = 'www.google.com'
+  value = 'https://github.com/Hadi-AlKammouni'
 
   constructor() { }
 
