@@ -59,77 +59,37 @@ Here's a brief high-level overview of the tech stack the Support app uses:
 <br><br>
 <img src="./readme/title5.svg" id="-impplementation"/>
 
-<!-- > Using the above mentioned tech stacks and the wireframes build with figma from the user sotries we have, the implementation of the app is shown as below, these are screenshots from the real app
+> Using the above mentioned tech stacks and the wireframes build with figma from the user sotries we have, the implementation of the app is shown as below, these are screenshots from the real app
 <br>
 (Please note that the following are gifs and may take few seconds to open)
 
 <br>
 
-### User Mobile App Implementation 📱
+### User Web Implementation 💻
 
-| Signup One   | Signup Two  | Signup Three  |
-| -----------------| -----| -----|
-| <img src="./readme/gifs/user/user-signup-step-one.gif"/> | <img src="./readme/gifs/user/user-signup-step-two.gif"/> | <img src="./readme/gifs/user/user-signup-step-three.gif"/> |
-
-| Login   | View Nearby Groceries  | Logout  |
-| -----------------| -----| -----|
-| <img src="./readme/gifs/user/user-login.gif"/> | <img src="./readme/gifs/user/user-view-nearby-groceries.gif"/> | <img src="./readme/gifs/user/user-logout.gif"/> |
-
-| View Grocery From Marker or Card   | View Recent Reviews | Submit Review  |
-| -----------------| -----| -----|
-| <img src="./readme/gifs/user/user-view-grocery-from-marker-or-card.gif"/> | <img src="./readme/gifs/user/user-view-recent-reviews.gif"/> | <img src="./readme/gifs/user/user-submit-review.gif"/> |
-
-| Update Profile   | Add Item to Cart | Remove Item From Cart  |
-| -----------------| -----| -----|
-| <img src="./readme/gifs/user/user-update-profile.gif"/> | <img src="./readme/gifs/user/user-add-to-order.gif"/> | <img src="./readme/gifs/user/user-remove-from-order.gif"/> |
-
-| Try to Over-Ride Existing Order   | Firebase Notification Upon Making an Order  |
-| -----------------|-----|
-| <img src="./readme/gifs/user/user-override-old-order.gif"/> | <img src="./readme/gifs/user/user-firebase-notification-upon-ordering.gif"/> |
-
-<br>
-
-### Seller Web Implementation 💻
-
-| Optical Character Recognition Technology Registration
+| Sign Up
 | -----------------|
-| <img src="./readme/gifs/seller/seller-ocr-registration.gif"/>
+| <img src="./readme/gifs/signup.gif"/>
 
-| Socket Real Time Chat
+| Sign In
 | -----------------|
-| <img src="./readme/gifs/seller/seller-socket-chat.gif"/> 
+| <img src="./readme/gifs/signin.gif"/> 
 
-| Add Item to Stock |
+| Forecast |
 | -----------------|
-| <img src="./readme/gifs/seller/seller-add-item-to-stock.gif"/> |
+| <img src="./readme/gifs/weather.gif"/> |
 
-| Manage Orders
+| QR Code Generator
 | -----------------|
-| <img src="./readme/gifs/seller/seller-manage-orders.gif"/> 
+| <img src="./readme/gifs/qr.gif"/>  
 
-| Edit Stock
+| Voice Recognition
 | -----------------|
-| <img src="./readme/gifs/seller/seller-edit-stock.gif"/> 
+| <img src="./readme/gifs/voice.gif"/> 
 
-| Remove Item From Stock
+| Translation
 | -----------------|
-| <img src="./readme/gifs/seller/seller-remove-item-from-stock.gif"/> 
-
-| Update Account
-| -----------------|
-| <img src="./readme/gifs/seller/seller-update-account.gif"/> 
-
-| Login
-| -----------------|
-| <img src="./readme/gifs/seller/seller-login.gif"/> 
-
-| Logout
-| -----------------|
-| <img src="./readme/gifs/seller/seller-logout.gif"/> 
-
-| View Users' Reviews
-| -----------------|
-| <img src="./readme/gifs/seller/seller-view-users-reviews.gif" jus/>  -->
+| <img src="./readme/gifs/translate.gif"/> 
 
 <br><br>
 <img src="./readme/title6.svg" id="-how-to-run"/>
