@@ -26,47 +26,24 @@
 
 <img src="./readme/title3.svg" id="-wireframes"/>
 
-<!-- > This design was planned before on paper, then moved to Figma app for the fine details.
+> This design was planned before on paper, then moved to Figma app for the fine details.
 Note that i didn't use any styling library or theme, all from scratch and using pure css modules
 <br>
-(Please note that pictures make take few seconds to open due to high quality) -->
+(Please note that pictures make take few seconds to open due to high quality)
 
-<!-- ### User Mobile App Wireframes 📱
+### User Wireframes 💻
 
-| Grocery  | Stock  | My Cart  |
-| -----------------| -----| -----|
-| <img src="./readme/wireframes/user/user-grocery.png" /> | <img src="./readme/wireframes/user/user-items.png"/> | <img src="./readme/wireframes/user/user-cart.png"/> |
-
-| Splash Screen  | Login  | Account  |
-| -----------------| -----| -----|
-| <img src="./readme/wireframes/user/user-splash.png"/> | <img src="./readme/wireframes/user/user-login.png"/> | <img src="./readme/wireframes/user/user-account.png"/> |
-
-| Signup One  | Signup Two  | Signup Three  |
-| -----------------| -----| -----|
-| <img src="./readme/wireframes/user/user-signup-one.png"/> | <img src="./readme/wireframes/user/user-signup-two.png"/> | <img src="./readme/wireframes/user/user-signup-three.png"/> |
-
-| Home  | Track  |
+| Login  | Signup  |
 | -----------------| -----|
-| <img src="./readme/wireframes/user/user-home.png"/> | <img src="./readme/wireframes/user/user-track.png"/> |
+| <img src="./readme/wireframes/login.png"/> | <img src="./readme/wireframes/signup.png"/> |
 
-### Seller Web Wireframes 💻
-
-| Reviews  | Add to Stock  |
+| Forecast  | QR Code Generator  |
 | -----------------| -----|
-| <img src="./readme/wireframes/seller/seller-reviews.png"/> | <img src="./readme/wireframes/seller/seller-add-to-stock.png"/> |
+| <img src="./readme/wireframes/weather.png"/> | <img src="./readme/wireframes/qr.png"/> |
 
-| View Stock  | Edit Account  |
+| Voice Recognition  | Translation  |
 | -----------------| -----|
-| <img src="./readme/wireframes/seller/seller-view-stock.png"/> | <img src="./readme/wireframes/seller/seller-edit-account.png"/> |
-
-| Signup  | Login  |
-| -----------------| -----|
-| <img src="./readme/wireframes/seller/seller-signup.png"/> | <img src="./readme/wireframes/seller/seller-login.png"/> |
-
-| Manage Orders  |
-| -----------------|
-| <img src="./readme/wireframes/seller/seller-manage-orders.png"/> | -->
-
+| <img src="./readme/wireframes/voice.png"/> | <img src="./readme/wireframes/translate.png"/> |
 
 <br><br>
 
