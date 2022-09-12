@@ -2,7 +2,7 @@ export const navbarData = [
     {
         routerLink: 'weather',
         icon: 'fa fa-home',
-        label: 'Weather'
+        label: 'Weather Data'
     },
     {
         routerLink: 'voice',
@@ -16,7 +16,7 @@ export const navbarData = [
     },
     {
         routerLink: 'logout',
-        icon: 'fa fa-right-from-bracket',
+        icon: 'fa fa-arrow-left',
         label: 'Logout'
     }
 ]
