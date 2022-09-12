@@ -1,0 +1,7 @@
+.aclass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(8px 8px 8px #141414);
+    opacity: .9;
+}

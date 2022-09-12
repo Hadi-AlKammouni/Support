@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { LogoutComponent } from './logout/logout.component';
+import { QrcodeComponent } from './qrcode/qrcode.component';
 import { VoiceComponent } from './voice/voice.component';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'auth', component: AuthComponent },
   { path: 'voice', component: VoiceComponent },
   { path: 'logout', component: LogoutComponent },
+  { path: 'qr', component: QrcodeComponent },
 ];
 
 @NgModule({
