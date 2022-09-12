@@ -72,18 +72,12 @@ Note that i didn't use any styling library or theme, all from scratch and using 
 
 <img src="./readme/title4.svg" id="-tech-stack"/>
 
-<!-- Here's a brief high-level overview of the tech stack the Fruitable app uses:
+Here's a brief high-level overview of the tech stack the Support app uses:
 
-- This project uses the [React app development framework](https://reactjs.org/). React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
-- In addition to [React native framework](https://reactnative.dev/). React Native combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces.You can use React Native today in your existing Android and iOS projects or you can create a whole new app from scratch.
-- To send remote push notifications, the project uses the [firebase_cloud_messaging](https://firebase.google.com/products/cloud-messaging/) package which provides a reliable and battery-efficient connection between your server and devices that allows you to deliver and receive messages and notifications on iOS, Android, and the web at no cost!
-- The project uses ["Socket package"](https://socket.io/) to implement the real time chat feature, where socket package creates the communication channel, and the channel is used to send data between application programs either locally or over networks.
+- For persistent storage (database), the project uses the [MySQL](https://www.mysql.com/) which is a widely used relational database management system (RDBMS). It is free and open-source. MySQL is ideal for both small and large applications.
+- [Laravel](https://laravel.com/) was used as backend of this project. Where Laravel is a web application php framework with expressive, elegant syntax.
 
-<br>
-
-- For persistent storage (database), the project uses the [MongoDB](https://www.mongodb.com/) which is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. 
-- ["Node.js"](https://dev.co/node-js/) was used as backend of this project. Where Node.jsis an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser, which was designed to build scalable network applications. 
-- ["Express.js"](http://expressjs.com/), or simply Express, was used with the help of Node.js to build the required APIs. Express is a back end web application framework for Node.js, released as free and open-source software under the MIT License. -->
+- This project uses the [Angular framework](https://angular.io/guide/what-is-angular). Angular is a development platform, built on Typescript. As a platform, Angular includes: A component-based framework for building scalable web applications / A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more / A suite of developer tools to help you develop, build, test, and update your code.
 
 <br><br>
 <img src="./readme/title5.svg" id="-impplementation"/>
