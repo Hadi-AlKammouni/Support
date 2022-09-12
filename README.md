@@ -158,7 +158,7 @@ Here's a brief high-level overview of the tech stack the Support app uses:
 <img src="./readme/title6.svg" id="-how-to-run"/>
 
 
-<!-- > This is an example of how you may give instructions on setting up your project locally.
+> This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -175,18 +175,21 @@ _Below is an example of how you can instruct your audience on installing and set
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Hadi-AlKammouni/Fruitable.git
+   git clone https://github.com/Hadi-AlKammouni/Support.git
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
-3. To run a folder
+3. To run the laravel folder 
    ```
-   npm start
+   php artisan serve
    ```
-4. Firebase notification API_KEY in .env file for react native folder
+4. To run the angular folder 
+   ```
+   ng serve
+   ```
+5. Rapid API_KEY in .env file for angular folder
    ```js
-   Firebase_API_KEY = 'Enter The API KEY';
+   Rapid_API_KEY = 'Enter The API KEY';
    ```
- -->
