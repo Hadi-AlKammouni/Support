@@ -9,35 +9,18 @@
 
 <br><br>
 
-
 <img src="./readme/title2.svg" id="-project-philosophy"/>
 
+<br>
 
-<!-- >(Frui)t + Vege(table) => Fruitable 😋
->
-> Fruitable is all what you need to make grocery shopping easy and time saving.
-The app is made to locate the nearby groceries that carries the goods you're looking for. With every purchase, a delivery tracking system is triggered to assist you in keeping track of your order.
-> 
-> Fruitable is a tool designed also for grocery store owners, allowing them to input their data and display their products to customers. Owners can communicate with one another via the website's chat feature. -->
+> Support project is implemented to provide the following services: forecast info 🌦, voice recognition 🎙, translation 📖, and generating qr code 🔲.
 
-<!-- ### User Stories
+### User Stories
 - As a user, I want to own an account and login whenever I want.
-- As a user, I want to view the nearest groceries.
-- As a user, I want to fill and modify my cart.
-- As a user, I want to get notified upon ordering.
-- As a user, I want to view others reviews.
-- As a user, I want to submit a grocery review.
-- As a user, I want to edit my account.
-- As a user, I want to track my order. 
-(Please note that this feature is implemented but not functional yet due to missing GOOGLE_API_KEY)
-
-### Seller Stories
-- As a seller, I want to register using new technology: optical character recognition (OCR).
-- As a seller, I want to make a real time chat with other stores.
-- As a seller, I want to login into my account and add items to my stock.
-- As a seller, I want to modify my stock.
-- As a seller, I want to edit my account.
-- As a seller, I want to manage users' orders. -->
+- As a user, I want to view the forecast info of any city.
+- As a user, I want to replace typing by voice recognition.
+- As a user, I want to translate the result of the voice recognition.
+- As a user, I want to generate qr code.
 
 <br><br>
 
