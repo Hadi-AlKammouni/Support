@@ -35,15 +35,15 @@ Note that i didn't use any styling library or theme, all from scratch and using 
 
 | Login  | Signup  |
 | -----------------| -----|
-| <img src="./readme/wireframes/login.png"/> | <img src="./readme/wireframes/signup.png"/> |
+| <img src="./readme/wireframes/Login.png"/> | <img src="./readme/wireframes/Signup.png"/> |
 
 | Forecast  | QR Code Generator  |
 | -----------------| -----|
-| <img src="./readme/wireframes/weather.png"/> | <img src="./readme/wireframes/qr.png"/> |
+| <img src="./readme/wireframes/Weather.png"/> | <img src="./readme/wireframes/QR.png"/> |
 
 | Voice Recognition  | Translation  |
 | -----------------| -----|
-| <img src="./readme/wireframes/voice.png"/> | <img src="./readme/wireframes/translate.png"/> |
+| <img src="./readme/wireframes/Voice.png"/> | <img src="./readme/wireframes/Translate.png"/> |
 
 <br><br>
 
