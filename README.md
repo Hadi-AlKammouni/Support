@@ -69,15 +69,15 @@ Here's a brief high-level overview of the tech stack the Support app uses:
 
 | Sign Up
 | -----------------|
-| <img src="./readme/gifs/signup.gif"/>
+| <img src="./readme/gifs/signup2.gif"/>
 
 | Sign In
 | -----------------|
-| <img src="./readme/gifs/signin.gif"/> 
+| <img src="./readme/gifs/login2.gif"/> 
 
 | Forecast |
 | -----------------|
-| <img src="./readme/gifs/weather.gif"/> |
+| <img src="./readme/gifs/forecast.gif"/> |
 
 | QR Code Generator
 | -----------------|
@@ -90,6 +90,10 @@ Here's a brief high-level overview of the tech stack the Support app uses:
 | Translation
 | -----------------|
 | <img src="./readme/gifs/translate.gif"/> 
+
+| Logout
+| -----------------|
+| <img src="./readme/gifs/logout.gif"/> 
 
 <br><br>
 <img src="./readme/title6.svg" id="-how-to-run"/>
